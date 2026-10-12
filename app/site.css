@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/*
+  BOFAST design tokens.
+  Tailwind v4 reads these @theme variables and generates matching utilities,
+  e.g. `bg-brand`, `text-ink`, `bg-surface`, `border-line`.
+*/
+@theme {
+  --color-brand: #22548f; /* primary blue – logo, icons, headings */
+  --color-brand-dark: #1a4373;
+  --color-brand-light: #3a6cae;
+
+  --color-surface: #e8ebf7; /* header + footer lavender */
+  --color-surface-2: #dbe1f1; /* pill buttons */
+  --color-surface-3: #f3f5fb; /* very light section background */
+
+  --color-ink: #2b2f36; /* body text */
+  --color-muted: #6b7280; /* secondary text, dates */
+  --color-line: #e2e5ee; /* hairline borders */
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* The Figma mockup uses a typewriter / monospace aesthetic throughout. */
+  font-family: var(--font-mono);
+  color: var(--color-ink);
+  background: #ffffff;
+}
+
+/* Reusable uppercase, tracked label used across the UI */
+.label-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Product page side panels (components/listings/ProductInfoPanels.tsx). */
+@keyframes panel-slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes panel-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.panel-slide-in {
+  animation: panel-slide-in 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.panel-backdrop-in {
+  animation: panel-backdrop-in 250ms ease-out;
+}
+/* The compare bar rising from the bottom edge. */
+@keyframes panel-rise-in {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.panel-rise-in {
+  animation: panel-rise-in 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .panel-slide-in,
+  .panel-rise-in,
+  .panel-backdrop-in {
+    animation: none;
+  }
+}

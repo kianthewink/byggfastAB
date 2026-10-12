@@ -1,0 +1,10 @@
+# Store text with LF line endings regardless of OS.
+* text=auto eol=lf
+
+# Never line-ending-convert binaries.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary

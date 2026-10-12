@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eef1f8;
+  --foreground: #14213d;
+
+  --color-sidebar: #22548f;
+  --color-sidebar-foreground: #ffffff;
+  --color-sidebar-muted: #b7c8e2;
+  --color-sidebar-active: #1a4374;
+
+  --color-panel: #dbe1f1;
+  --color-panel-foreground: #14213d;
+  --color-panel-muted: #4d5f80;
+
+  --color-accent: #22548f;
+  --color-accent-foreground: #ffffff;
+
+  --color-border: rgba(34, 84, 143, 0.16);
+  --color-card: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background: #0e1728;
+  --foreground: #e7ecf5;
+
+  --color-sidebar: #14213d;
+  --color-sidebar-foreground: #eef1f8;
+  --color-sidebar-muted: #8ea3c9;
+  --color-sidebar-active: #22548f;
+
+  --color-panel: #1b2b47;
+  --color-panel-foreground: #dbe1f1;
+  --color-panel-muted: #93a3c4;
+
+  --color-accent: #4d7fc0;
+  --color-accent-foreground: #0e1728;
+
+  --color-border: rgba(219, 225, 241, 0.12);
+  --color-card: #16233b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-sidebar: var(--color-sidebar);
+  --color-sidebar-foreground: var(--color-sidebar-foreground);
+  --color-sidebar-muted: var(--color-sidebar-muted);
+  --color-sidebar-active: var(--color-sidebar-active);
+
+  --color-panel: var(--color-panel);
+  --color-panel-foreground: var(--color-panel-foreground);
+  --color-panel-muted: var(--color-panel-muted);
+
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+
+  --color-border: var(--color-border);
+  --color-card: var(--color-card);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}

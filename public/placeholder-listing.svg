@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Bild saknas">
+  <rect width="800" height="600" fill="#e8ebf7"/>
+  <g fill="none" stroke="#22548f" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" opacity="0.45">
+    <path d="M250 330 L400 210 L550 330"/>
+    <path d="M290 320 L290 430 L510 430 L510 320"/>
+    <path d="M370 430 L370 360 L430 360 L430 430"/>
+  </g>
+  <text x="400" y="500" text-anchor="middle" font-family="ui-monospace, monospace" font-size="26" fill="#6b7280">Bild saknas</text>
+</svg>
